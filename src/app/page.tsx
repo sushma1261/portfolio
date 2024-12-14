@@ -1,14 +1,5 @@
-import styles from "./page.module.css";
+import VerticalTabs from "@/components/VerticalTabs";
 
 export default function Home() {
-  return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <div>Sushma Manthena</div>
-      </main>
-      <main className={styles.main}>
-        <div>Sushma Manthena</div>
-      </main>
-    </div>
-  );
+  return <VerticalTabs />;
 }
