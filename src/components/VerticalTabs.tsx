@@ -6,6 +6,7 @@ import * as React from "react";
 import Contact from "./Contact";
 import Education from "./Education";
 import Experience from "./Experience";
+import Home from "./Home";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -80,7 +81,7 @@ export default function VerticalTabs() {
           <Tab label="Contact" {...a11yProps(6)} />
         </Tabs>
         <CustomTabPanel value={value} index={0}>
-          <Box>Home</Box>
+          <Home />
         </CustomTabPanel>
         <CustomTabPanel value={value} index={1}>
           <Box>About</Box>
