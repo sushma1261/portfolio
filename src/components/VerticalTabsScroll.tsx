@@ -90,7 +90,7 @@ const VerticalTabsWithScroll: React.FC = () => {
         orientation="vertical"
         value={value}
         onChange={handleTabChange}
-        sx={{ width: "30vw" }}
+        sx={{ width: "50vw" }}
       >
         {tabsNameList.map((label, idx) => {
           return <Tab key={idx} label={label} />;
