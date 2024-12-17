@@ -58,8 +58,12 @@ const Typewriter: React.FC<TypewriterProps> = ({
   return (
     <div>
       <Box sx={{ boxShadow: 0 }}>
-        <Typography style={{ textShadow: "1px 1px 2px pink" }} variant="h5">
-          {displayedText}❚
+        <Typography
+          style={{ textShadow: "2px 2px 4px black", color: "yellow" }}
+          variant="h5"
+        >
+          {displayedText}
+          <span style={{ color: "white" }}>|</span>
         </Typography>
       </Box>
     </div>

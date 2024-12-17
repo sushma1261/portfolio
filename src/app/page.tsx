@@ -1,5 +1,5 @@
-import VerticalTabs from "@/components/VerticalTabs";
+import VerticalTabsWithScroll from "@/components/VerticalTabsScroll";
 
 export default function Home() {
-  return <VerticalTabs />;
+  return <VerticalTabsWithScroll />;
 }

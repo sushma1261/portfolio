@@ -1,4 +1,6 @@
+import { namebgc } from "@/assets/Colors";
 import { Typography } from "@mui/material";
+import { ContactButtons } from "./Contact";
 import Typewriter from "./TypeWriter";
 
 const Home = () => {
@@ -10,8 +12,33 @@ const Home = () => {
 
   return (
     <div>
-      <Typography variant="h2">I am Sushma Manthena</Typography>
-      <Typewriter strings={strings} />
+      <span>
+        <Typography
+          variant="h2"
+          style={{ textShadow: "2px 2px 2px black", color: "white" }}
+          fontWeight={"400"}
+        >
+          Hello, I am{" "}
+          <span
+            style={{
+              backgroundColor: namebgc,
+              paddingLeft: "4px",
+              paddingRight: "4px",
+            }}
+          >
+            Sushma Manthena
+          </span>
+        </Typography>
+      </span>
+      <div style={{ marginTop: "16px", marginBottom: "20px" }}>
+        <Typewriter strings={strings} />
+      </div>
+      <Typography variant="body1" color="white">
+        Self-motivated, proactive, and deeply passionate about coding, with a
+        natural curiosity for tackling complex and challenging problems in the
+        real world.
+      </Typography>
+      <ContactButtons />
     </div>
   );
 };
