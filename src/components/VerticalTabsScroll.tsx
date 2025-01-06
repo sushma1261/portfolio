@@ -1,6 +1,6 @@
 "use client";
 
-import { backgroundColor } from "@/assets/Colors";
+import { backgroundColor } from "@/common/Colors";
 import { Box, Tab, Tabs } from "@mui/material";
 import React, { useEffect, useRef, useState } from "react";
 import About from "./About";
@@ -90,7 +90,7 @@ const VerticalTabsWithScroll: React.FC = () => {
         orientation="vertical"
         value={value}
         onChange={handleTabChange}
-        sx={{ width: "50vw" }}
+        sx={{ width: "25vw" }}
       >
         {tabsNameList.map((label, idx) => {
           return <Tab key={idx} label={label} />;
@@ -103,6 +103,7 @@ const VerticalTabsWithScroll: React.FC = () => {
           flexGrow: 1,
           overflowY: "scroll",
           height: "100vh",
+          width: "80vw",
         }}
         onScroll={handleScroll}
       >
@@ -113,7 +114,8 @@ const VerticalTabsWithScroll: React.FC = () => {
               sectionsRefs.current[index] = { current: el };
             }}
             style={{
-              height: "100vh",
+              maxHeight: "400vh",
+              minHeight: "100vh",
               display: "flex",
               padding: 100,
               backgroundColor: backgroundColor,

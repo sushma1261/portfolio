@@ -1,5 +1,5 @@
-import VerticalTabsWithScroll from "@/components/VerticalTabsScroll";
+import VerticalTabsIntersectionObserver from "@/components/VerticalTabsIntersectionObserver";
 
 export default function Home() {
-  return <VerticalTabsWithScroll />;
+  return <VerticalTabsIntersectionObserver />;
 }
