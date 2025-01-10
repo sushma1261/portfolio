@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { ContactButtons } from "./Contact";
 import Typewriter from "./TypeWriter";
 
-const Home = ({ isVisible = true }: ISection) => {
+const Home = ({ isVisible }: ISection) => {
   const strings = [
     "A passionate engineer!",
     "A full-stack developer!",
