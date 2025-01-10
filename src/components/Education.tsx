@@ -23,7 +23,13 @@ interface EducationDetails {
 const Education = () => {
   return (
     <Box>
-      Education:
+      <Typography
+        variant="h4"
+        color="white"
+        style={{ textShadow: "1px 1px 2px black" }}
+      >
+        Education
+      </Typography>
       <div
         style={{
           display: "flex",

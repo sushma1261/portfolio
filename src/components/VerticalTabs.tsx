@@ -1,8 +1,10 @@
 "use client";
+import { backgroundColor } from "@/common/Colors";
 import Box from "@mui/material/Box";
 import Tab from "@mui/material/Tab";
 import Tabs from "@mui/material/Tabs";
 import * as React from "react";
+import About from "./About";
 import Contact from "./Contact";
 import Education from "./Education";
 import Experience from "./Experience";
@@ -84,7 +86,7 @@ export default function VerticalTabs() {
           <Home />
         </CustomTabPanel>
         <CustomTabPanel value={value} index={1}>
-          <Box>About</Box>
+          <About />
         </CustomTabPanel>
         <CustomTabPanel value={value} index={2}>
           <Experience />
@@ -123,7 +125,7 @@ const CustomTabPanel = (props: TabPanelProps) => {
       aria-labelledby={`simple-tab-${index}`}
       style={{
         padding: 100,
-        background: "#7dc9b8",
+        background: backgroundColor,
         width: "80vw",
       }}
       {...other}

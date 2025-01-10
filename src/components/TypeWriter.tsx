@@ -5,12 +5,14 @@ interface TypewriterProps {
   strings: string[]; // List of strings to display
   typingSpeed?: number; // Speed of typing (in ms per character)
   delayBetweenStrings?: number; // Delay before switching strings (in ms)
+  isAnimating?: boolean;
 }
 
 const Typewriter: React.FC<TypewriterProps> = ({
   strings,
   typingSpeed = 80,
   delayBetweenStrings = 1000,
+  isAnimating = true,
 }) => {
   const [currentStringIndex, setCurrentStringIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState("");
@@ -20,6 +22,9 @@ const Typewriter: React.FC<TypewriterProps> = ({
     const currentString = strings[currentStringIndex];
 
     const type = () => {
+      if (!isAnimating) {
+        return;
+      }
       if (!isDeleting) {
         // Typing effect
         setDisplayedText((prev) => currentString.substring(0, prev.length + 1));
@@ -53,13 +58,18 @@ const Typewriter: React.FC<TypewriterProps> = ({
     currentStringIndex,
     typingSpeed,
     delayBetweenStrings,
+    isAnimating,
   ]);
 
   return (
     <div>
       <Box sx={{ boxShadow: 0 }}>
-        <Typography style={{ textShadow: "1px 1px 2px pink" }} variant="h5">
-          {displayedText}❚
+        <Typography
+          style={{ textShadow: "2px 2px 4px black", color: "yellow" }}
+          variant="h5"
+        >
+          {displayedText}
+          <span style={{ color: "white" }}>|</span>
         </Typography>
       </Box>
     </div>
