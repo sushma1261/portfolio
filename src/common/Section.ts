@@ -1,3 +1,3 @@
 export interface ISection {
-  isVisible: boolean;
+  isVisible?: boolean;
 }
